@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Top Airlines</h3>
+<ul class="list-group">
+{% for a in data %}
+<li class="list-group-item">
+{{ a.airline_name }} - {{ a.total }} Flights
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
