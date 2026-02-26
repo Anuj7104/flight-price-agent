@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome {{ session.get('user','Guest') }}</h2>
+<a href="/search" class="btn btn-primary">Search Flights</a>
+<a href="/admin" class="btn btn-secondary">Admin Dashboard</a>
+{% endblock %}
