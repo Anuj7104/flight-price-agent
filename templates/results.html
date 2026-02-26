@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% for f in flights %}
+<div class="card mb-3">
+<div class="card-body">
+<h5>{{ f.airline_name }}</h5>
+<p>Stops: {{ f.stops }}</p>
+<p>Price: ₹{{ f.base_price }}</p>
+<p>Predicted: ₹{{ f.predicted_price }}</p>
+<a href="{{ f.booking_url }}" target="_blank" class="btn btn-success">Book</a>
+</div>
+</div>
+{% endfor %}
+{% endblock %}
